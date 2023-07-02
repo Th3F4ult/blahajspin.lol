@@ -1,0 +1,66 @@
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta charset="UTF-8">
+<title>Horizontally spinning Blahaj</title>
+</head>
+<body>
+</body>
+<script>
+    var should_play=true
+    window.onclick = () => {
+        if (should_play){
+            should_play=!should_play
+            let soundSource = "freebird.mp3";
+            let sound = new Audio(soundSource);
+            sound.play();
+            sound.onended = () => {
+                sound.play();
+            }
+        }
+  const element = document.getElementById("borrame");
+  element.remove();
+    }
+</script>
+
+<style>
+
+#fondo {
+    width: 100%; 
+    height: 100%; 
+    position: fixed; 
+    left: 0px; 
+    top: 0px; 
+}
+
+.damnboyhethicc {
+    width:100%;
+    height:100%;
+}
+
+body {
+background-image: url("blahaj.gif");
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+.texto {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+</style>
+
+
+<div id="fondo">
+    <img src="blahaj.gif" class="damnboyhethicc"/>
+  <div class="texto"><h1 id=borrame>Click anywhere for sound</h1></div>
+</div>
+
+<a rel="me" href="https://tech.lgbt/@th3f4ult">Mastodon</a>
+
+
+</html>
